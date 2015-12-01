@@ -16,29 +16,13 @@ class Player {
     
     func updateInfo() {
         var localValue = 0
+        handSize = hand.count
         for card in hand {
             if (card.value > 10){
                 localValue += 10
             }
             else {
                 localValue += card.value
-            }
-            var temp = ""
-            if (card.value > 10)
-            {
-                if (card.value == 11){
-                    temp = "Jack"
-                }
-                else if (card.value == 12){
-                    temp = "Queen"
-                }
-                else if (card.value == 13){
-                    temp = "King"
-                }
-                //hand += card.suit + ": " + temp + " "
-            }
-            else {
-                //hand += card.suit + ": " + String(card.value) + " "
             }
         }
         value = localValue
