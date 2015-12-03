@@ -200,11 +200,9 @@ class GameScene: SKScene {
         currentGameState = gameState.Ongoing
         player.hand.removeAll()
         player.hand.append(draw())
-        player.handSize++
         player.updateInfo()
         dealer.hand.removeAll()
         dealer.hand.append(draw())
-        dealer.handSize++
         dealer.updateInfo()
         
     }
