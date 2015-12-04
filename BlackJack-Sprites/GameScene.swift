@@ -40,7 +40,9 @@ class GameScene: SKScene {
     let resetButton = SKSpriteNode(imageNamed: "PNG-cards-1.3/reset.png")
     
     override func didMoveToView(view: SKView) {
-        
+        /*
+            Adds labels to show which side belongs to which player
+        */
         let dealerLabel = SKLabelNode(fontNamed:"Helvetica")
         dealerLabel.text = "Dealer";
         dealerLabel.fontSize = 45;
