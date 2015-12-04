@@ -46,7 +46,7 @@ class Card : SKSpriteNode {
         else {
             title = String(cardValue)
         }
-        let imageNamed = "PNG-cards-1.3/" + title + "_of_" + suitName + ".png"
+        let imageNamed = "" + title + "_of_" + suitName + ".png"
         let cardTexture = SKTexture(imageNamed: imageNamed)
         super.init(texture: cardTexture, color: UIColor.clearColor(), size: cardTexture.size())
         suit = suitName

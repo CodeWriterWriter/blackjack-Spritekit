@@ -35,9 +35,9 @@ class GameScene: SKScene {
     /*
         Declare constant buttons and their image files
     */
-    let hitButton = SKSpriteNode(imageNamed:"PNG-cards-1.3/hit.png")
-    let stayButton = SKSpriteNode(imageNamed: "PNG-cards-1.3/stay.png")
-    let resetButton = SKSpriteNode(imageNamed: "PNG-cards-1.3/reset.png")
+    let hitButton = SKSpriteNode(imageNamed:"hit.png")
+    let stayButton = SKSpriteNode(imageNamed: "stay.png")
+    let resetButton = SKSpriteNode(imageNamed: "reset.png")
     
     override func didMoveToView(view: SKView) {
         /*
