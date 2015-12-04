@@ -9,14 +9,25 @@
 import Foundation
 import SpriteKit
 
+/*
+    Card class stores data and image for card node object in game
+*/
 class Card : SKSpriteNode {
     var suit = "";
     var value = 0;
     
+    /*
+        Required for SKSpriteNode
+    */
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
+    /*
+        checks and chnages card name based on special cases
+        assigns values and image reference based on which card it is.
+        Card images obtained from: http://opengameart.org/content/playing-cards-vector-png
+    */
     init(suitName: String, cardValue : Int){
         var title = ""
         if (cardValue == 1)
