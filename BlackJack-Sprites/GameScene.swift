@@ -104,13 +104,30 @@ class GameScene: SKScene {
                     if (player.value > 21)
                     {
                         currentGameState = gameState.Finished
+                        let myLabel = SKLabelNode(fontNamed:"Helvetica")
+                        myLabel.text = "You Lose";
+                        myLabel.fontSize = 45;
+                        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) + 100);
                         
+                        self.addChild(myLabel)
+
+                        
+                    }
+                    else if (player.handSize >= 5){
+                        currentGameState = gameState.Finished
+                        let myLabel = SKLabelNode(fontNamed:"Helvetica")
+                        myLabel.text = "You Win";
+                        myLabel.fontSize = 45;
+                        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) + 100);
+                        
+                        self.addChild(myLabel)
+
                     }
                 }
             }
             if (node.name == "stay")
             {
-                let myLabel = SKLabelNode(fontNamed:"Chalkduster")
+                let myLabel = SKLabelNode(fontNamed:"Helvetica")
                 myLabel.text = "";
                 myLabel.fontSize = 45;
                 myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame) + 100);
@@ -130,7 +147,7 @@ class GameScene: SKScene {
                             self.addChild(dealer.hand.last!)
                         }
                         currentGameState = gameState.Finished
-                        if (((dealer.value > player.value) && !(dealer.value > 21)) || (player.value > 21))
+                        if (((dealer.value > player.value) && !(dealer.value > 21)) || (player.value > 21) || ((dealer.handSize >= 5) && !(dealer.value > 21) ))
                         {
                             myLabel.text = "You Lost"
                         }
